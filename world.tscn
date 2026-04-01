@@ -1,45 +1,22 @@
 [gd_scene format=3 uid="uid://m6q16auey0is"]
 
 [ext_resource type="PackedScene" uid="uid://ek6lo11itu6r" path="res://car.tscn" id="1_f3sb7"]
+[ext_resource type="Texture2D" uid="uid://cflbjkckimq0c" path="res://road.png" id="1_fj7yv"]
+[ext_resource type="Script" uid="uid://dwbh5xp1vcap3" path="res://camera_2d.gd" id="3_tlwt5"]
 
 [node name="World" type="Node2D" unique_id=1359589082]
 
-[node name="Road" type="ColorRect" parent="." unique_id=1501364648]
-offset_left = 2.0
-offset_top = -2.0
-offset_right = 2514.0
-offset_bottom = 418.0
-color = Color(0.39232534, 0.39232537, 0.39232534, 1)
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1577972086]
+repeat_size = Vector2(2000, 0)
 
-[node name="Line" type="ColorRect" parent="." unique_id=636819859]
-offset_left = 16.0
-offset_top = 145.0
-offset_right = 247.0
-offset_bottom = 163.0
-
-[node name="Line2" type="ColorRect" parent="." unique_id=570172027]
-offset_left = 270.0
-offset_top = 144.0
-offset_right = 501.0
-offset_bottom = 162.0
-
-[node name="Line3" type="ColorRect" parent="." unique_id=1937699360]
-offset_left = 521.0
-offset_top = 145.0
-offset_right = 752.0
-offset_bottom = 163.0
-
-[node name="Line4" type="ColorRect" parent="." unique_id=1034239607]
-offset_left = 783.0
-offset_top = 144.0
-offset_right = 1014.0
-offset_bottom = 162.0
-
-[node name="Line5" type="ColorRect" parent="." unique_id=347684126]
-offset_left = 1054.0
-offset_top = 141.0
-offset_right = 1285.0
-offset_bottom = 159.0
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1449886151]
+position = Vector2(1011, 66)
+scale = Vector2(2, 1)
+texture = ExtResource("1_fj7yv")
 
 [node name="Car" parent="." unique_id=421941371 instance=ExtResource("1_f3sb7")]
-position = Vector2(66, 65)
+position = Vector2(146, 65)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=497271678]
+position = Vector2(66, 67)
+script = ExtResource("3_tlwt5")

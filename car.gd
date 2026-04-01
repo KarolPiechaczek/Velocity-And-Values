@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 300.0 
-const LANE_DISTANCE = 150.0 
+const LANE_DISTANCE = 220.0 
 
 var current_lane = 0
 var target_y = 0.0
