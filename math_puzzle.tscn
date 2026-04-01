@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://by0fkqfbxrbc3"]
+
+[ext_resource type="Script" uid="uid://dy2b21u7so1mc" path="res://math_puzzle.gd" id="1_1j6sf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
+size = Vector2(39.999878, 39.333332)
+
+[node name="MathPuzzle" type="Node2D" unique_id=1093084979]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_1j6sf")
+mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=1241525945]
+offset_left = 151.33331
+offset_top = 1.999999
+offset_right = 306.33328
+offset_bottom = 90.0
+theme_override_font_sizes/font_size = 64
+
+[node name="Gate1" type="Area2D" parent="." unique_id=1693038984]
+position = Vector2(0.66666675, 51.333374)
+
+[node name="ColorRect" type="ColorRect" parent="Gate1" unique_id=620155165]
+offset_left = 508.0
+offset_top = -170.66667
+offset_right = 548.0
+offset_bottom = -130.66667
+color = Color(1, 1, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gate1" unique_id=504761938]
+position = Vector2(528.0002, -151)
+shape = SubResource("RectangleShape2D_aqk2v")
+
+[node name="Label" type="Label" parent="Gate1" unique_id=2141702030]
+offset_left = 508.0
+offset_top = -163.33334
+offset_right = 548.0
+offset_bottom = -140.33334
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Gate2" type="Area2D" parent="." unique_id=874733488]
+position = Vector2(0.6666666, 193.99997)
+
+[node name="ColorRect" type="ColorRect" parent="Gate2" unique_id=1416913806]
+offset_left = 508.0
+offset_top = -170.66667
+offset_right = 548.0
+offset_bottom = -130.66667
+color = Color(1, 1, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gate2" unique_id=1139604378]
+position = Vector2(528.0002, -151)
+shape = SubResource("RectangleShape2D_aqk2v")
+
+[node name="Label" type="Label" parent="Gate2" unique_id=1438063310]
+offset_left = 508.0
+offset_top = -163.33334
+offset_right = 548.0
+offset_bottom = -140.33334
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Gate3" type="Area2D" parent="." unique_id=1482806584]
+position = Vector2(0.6666678, 332.6669)
+
+[node name="ColorRect" type="ColorRect" parent="Gate3" unique_id=1901533604]
+offset_left = 508.0
+offset_top = -170.66667
+offset_right = 548.0
+offset_bottom = -130.66667
+color = Color(1, 1, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gate3" unique_id=2065974367]
+position = Vector2(528.0002, -151)
+shape = SubResource("RectangleShape2D_aqk2v")
+
+[node name="Label" type="Label" parent="Gate3" unique_id=881635299]
+offset_left = 508.0
+offset_top = -163.33334
+offset_right = 548.0
+offset_bottom = -140.33334
+theme_override_colors/font_color = Color(0, 0, 0, 1)

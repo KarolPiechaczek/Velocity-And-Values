@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ek6lo11itu6r" path="res://car.tscn" id="1_f3sb7"]
 [ext_resource type="Texture2D" uid="uid://cflbjkckimq0c" path="res://road.png" id="1_fj7yv"]
 [ext_resource type="Script" uid="uid://dwbh5xp1vcap3" path="res://camera_2d.gd" id="3_tlwt5"]
+[ext_resource type="Script" uid="uid://8j1htwmbwcab" path="res://spawner.gd" id="4_aqk2v"]
 
 [node name="World" type="Node2D" unique_id=1359589082]
 
@@ -14,9 +15,12 @@ position = Vector2(1011, 66)
 scale = Vector2(2, 1)
 texture = ExtResource("1_fj7yv")
 
-[node name="Car" parent="." unique_id=421941371 instance=ExtResource("1_f3sb7")]
-position = Vector2(146, 65)
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=497271678]
 position = Vector2(66, 67)
 script = ExtResource("3_tlwt5")
+
+[node name="Spawner" type="Node2D" parent="." unique_id=1915127134]
+script = ExtResource("4_aqk2v")
+
+[node name="Car" parent="." unique_id=421941371 instance=ExtResource("1_f3sb7")]
+position = Vector2(146, 65)
