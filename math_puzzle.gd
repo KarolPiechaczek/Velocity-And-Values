@@ -1,7 +1,7 @@
 extends Node2D
 
 enum Difficulty {ADD, SUB, MUL, DIV, RANDOM}
-@export var mode : Difficulty = Difficulty.ADD
+@export var mode : Difficulty = Difficulty.RANDOM
 
 var correct_answer : int
 var correct_gate_index : int # 0 for Gate1, 1 for Gate2, 2 for Gate3
@@ -27,7 +27,6 @@ func generate_question():
 			correct_answer = a + b
 			op_text = str(a) + " + " + str(b)
 		Difficulty.SUB:
-			# Prevent negative numbers: big minus small
 			var big = max(a, b)
 			var small = min(a, b)
 			correct_answer = big - small
@@ -36,24 +35,34 @@ func generate_question():
 			correct_answer = a * b
 			op_text = str(a) + " x " + str(b)
 		Difficulty.DIV:
-			# Ensure integer division result
 			correct_answer = b
 			op_text = str(a * b) + " : " + str(a)
 
 	$Label.text = op_text + " = ?"
 	
-	# Select random gate as correct
 	correct_gate_index = randi() % 3
 	var gates = [$Gate1, $Gate2, $Gate3]
+	
+	# NOWOŚĆ: Lista liczb użytych na bramkach (zaczynamy od wpisania poprawnego wyniku)
+	var used_numbers = [correct_answer]
 	
 	for i in range(3):
 		var gate_label = gates[i].get_node("Label")
 		if i == correct_gate_index:
 			gate_label.text = str(correct_answer)
 		else:
-			# Generate fake answers close to the correct one
-			var fake = correct_answer + randi_range(-5, 5)
-			if fake == correct_answer: fake += 1
+			var fake = correct_answer
+			
+			# Pętla 'while' kręci się tak długo, dopóki wylosowana liczba znajduje się na liście 'used_numbers'
+			while fake in used_numbers:
+				fake = correct_answer + randi_range(-5, 5)
+				
+				# Dodatkowe zabezpieczenie: nie chcemy ujemnych fałszywek (żeby nie mylić przy mnożeniu/dzieleniu)
+				if fake < 0:
+					fake = correct_answer + randi_range(1, 8)
+					
+			# Dodajemy nową fałszywkę do listy użytych liczb, żeby kolejna bramka jej nie skopiowała
+			used_numbers.append(fake)
 			gate_label.text = str(fake)
 
 # THIS FUNCTION EXECUTES ON COLLISION

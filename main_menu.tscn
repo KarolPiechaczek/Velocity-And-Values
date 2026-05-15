@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://c0cy8dktjafvn"]
+
+[ext_resource type="Script" uid="uid://cnmtgycvb1nwy" path="res://main_menu.gd" id="1_06t4h"]
+
+[node name="MainMenu" type="Control" unique_id=741860456]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=245755500]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 646.0
+color = Color(0.40392157, 0.40392157, 0.40392157, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=980360040]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 416.0
+offset_top = 105.0
+offset_right = -413.0
+offset_bottom = -114.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PlayB" type="Button" parent="VBoxContainer" unique_id=962815195]
+layout_mode = 2
+text = "Play"
+
+[node name="HowToPlayB" type="Button" parent="VBoxContainer" unique_id=772859982]
+layout_mode = 2
+text = "How to Play"
+
+[node name="ScoreboardB" type="Button" parent="VBoxContainer" unique_id=2014362915]
+layout_mode = 2
+text = "Scoreboard"
+
+[node name="SettingsB" type="Button" parent="VBoxContainer" unique_id=785944130]
+layout_mode = 2
+text = "Settings"
+
+[node name="CreditsB" type="Button" parent="VBoxContainer" unique_id=1978725090]
+layout_mode = 2
+text = "Credits"
+
+[node name="QuitB" type="Button" parent="VBoxContainer" unique_id=1127629881]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/PlayB" to="." method="_on_play_b_pressed"]
+[connection signal="pressed" from="VBoxContainer/PlayB" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HowToPlayB" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScoreboardB" to="." method="_on_scoreboard_b_pressed"]
+[connection signal="pressed" from="VBoxContainer/SettingsB" to="." method="_on_settings_b_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsB" to="." method="_on_credits_b_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitB" to="." method="_on_quit_b_pressed"]
