@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cflbjkckimq0c" path="res://road.png" id="1_fj7yv"]
 [ext_resource type="Script" uid="uid://dwbh5xp1vcap3" path="res://camera_2d.gd" id="3_tlwt5"]
 [ext_resource type="Script" uid="uid://8j1htwmbwcab" path="res://spawner.gd" id="4_aqk2v"]
+[ext_resource type="Script" uid="uid://rabgkuxl2e5d" path="res://hud.gd" id="5_036b0"]
 
 [node name="World" type="Node2D" unique_id=1359589082]
 
@@ -24,3 +25,17 @@ script = ExtResource("4_aqk2v")
 
 [node name="Car" parent="." unique_id=421941371 instance=ExtResource("1_f3sb7")]
 position = Vector2(146, 65)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=624508304]
+script = ExtResource("5_036b0")
+
+[node name="ScoreLabel" type="Label" parent="HUD" unique_id=1556138341]
+anchors_preset = -1
+anchor_top = -0.17600001
+anchor_bottom = -0.17600001
+offset_left = 73.0
+offset_top = 160.048
+offset_right = 201.0
+offset_bottom = 202.048
+theme_override_font_sizes/font_size = 30
+text = "SCORE: 0"

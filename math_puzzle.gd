@@ -1,5 +1,6 @@
 extends Node2D
 
+var game_over_scene = preload("res://game_over_ui.tscn")
 enum Difficulty {ADD, SUB, MUL, DIV, RANDOM}
 @export var mode : Difficulty = Difficulty.RANDOM
 
@@ -67,12 +68,20 @@ func generate_question():
 
 # THIS FUNCTION EXECUTES ON COLLISION
 func _on_gate_entered(body, gate_idx):
-	# Check if the body that entered the gate is the player (Car)
 	if body.name == "Car":
 		if gate_idx == correct_gate_index:
-			print("Correct answer!")
-			# Optional: add points here
+			# CORRECT ANSWER
+			Global.score += 1
+			print("Correct! Score: ", Global.score)
+			# Destroy the puzzle so you don't hit it again
+			queue_free() 
 		else:
-			print("Wrong! Game over.")
-			# PAUSE THE GAME
+			# WRONG ANSWER
+			print("Wrong! Game Over.")
+			# Pause the game logic
 			get_tree().paused = true
+			# Spawn the Game Over UI on screen
+			var canvas = CanvasLayer.new() # Create a layer to hold the UI
+			var game_over = game_over_scene.instantiate()
+			get_tree().root.add_child(canvas)
+			canvas.add_child(game_over)

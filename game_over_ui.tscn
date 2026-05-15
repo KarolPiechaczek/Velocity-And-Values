@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dvvwgsfd1e5ge"]
+
+[ext_resource type="Script" uid="uid://cbnbpwrw4uqif" path="res://game_over_ui.gd" id="1_ji7mg"]
+
+[node name="GameOverUI" type="Control" unique_id=1473936507]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ji7mg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2060382256]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 642.0
+color = Color(0, 0, 0, 0.2627451)
+
+[node name="GameOverL" type="Label" parent="." unique_id=1319729872]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 257.0
+theme_override_font_sizes/font_size = 104
+text = "GAME OVER!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreL" type="Label" parent="." unique_id=2014533917]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.23700002
+anchor_bottom = 0.30200002
+offset_top = 289.0
+offset_right = 878.97595
+offset_bottom = 154.30399
+theme_override_font_sizes/font_size = 44
+text = "SCORE: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1260772019]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.16700001
+anchor_bottom = 0.22200002
+offset_top = 425.0
+offset_right = 959.61597
+offset_bottom = 355.14398
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="RestartB" type="Button" parent="HBoxContainer" unique_id=979420167]
+layout_mode = 2
+text = "Restart"
+
+[node name="MainMenuB" type="Button" parent="HBoxContainer" unique_id=1375024651]
+layout_mode = 2
+text = "Main Menu"
+
+[connection signal="pressed" from="HBoxContainer/RestartB" to="." method="_on_restart_b_pressed"]
+[connection signal="pressed" from="HBoxContainer/MainMenuB" to="." method="_on_main_menu_b_pressed"]
