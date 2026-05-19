@@ -21,8 +21,7 @@ func spawn_puzzle():
 	new_puzzle.global_position.x = next_spawn_x
 	new_puzzle.global_position.y = 0 
 	
-	# Randomize puzzle difficulty mode (0 to 3)
-	new_puzzle.mode = randi() % 4
+	new_puzzle.mode = Global.math_mode
 	
 	# Add the puzzle to the scene
 	add_child(new_puzzle)
