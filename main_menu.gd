@@ -33,3 +33,7 @@ func _on_credits_b_pressed() -> void:
 
 func _on_quit_b_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_garage_b_pressed() -> void:
+	get_tree().change_scene_to_file("res://skin_menu.tscn")

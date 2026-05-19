@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dy2b21u7so1mc" path="res://math_puzzle.gd" id="1_1j6sf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
-size = Vector2(39.999878, 39.333332)
+size = Vector2(39.99994, 67.33331)
 
 [node name="MathPuzzle" type="Node2D" unique_id=1093084979]
 scale = Vector2(1.5, 1.5)
@@ -21,9 +21,9 @@ position = Vector2(0.66666675, 51.333374)
 
 [node name="ColorRect" type="ColorRect" parent="Gate1" unique_id=620155165]
 offset_left = 508.0
-offset_top = -170.66667
+offset_top = -184.00005
 offset_right = 548.0
-offset_bottom = -130.66667
+offset_bottom = -118.000046
 color = Color(1, 1, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gate1" unique_id=504761938]
@@ -32,9 +32,9 @@ shape = SubResource("RectangleShape2D_aqk2v")
 
 [node name="Label" type="Label" parent="Gate1" unique_id=2141702030]
 offset_left = 508.0
-offset_top = -163.33334
+offset_top = -184.00005
 offset_right = 548.0
-offset_bottom = -140.33334
+offset_bottom = -117.333374
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -44,9 +44,9 @@ position = Vector2(0.6666666, 193.99997)
 
 [node name="ColorRect" type="ColorRect" parent="Gate2" unique_id=1416913806]
 offset_left = 508.0
-offset_top = -170.66667
+offset_top = -183.99997
 offset_right = 548.0
-offset_bottom = -130.66667
+offset_bottom = -117.99997
 color = Color(1, 1, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gate2" unique_id=1139604378]
@@ -55,9 +55,9 @@ shape = SubResource("RectangleShape2D_aqk2v")
 
 [node name="Label" type="Label" parent="Gate2" unique_id=1438063310]
 offset_left = 508.0
-offset_top = -163.33334
+offset_top = -184.66663
 offset_right = 548.0
-offset_bottom = -140.33334
+offset_bottom = -117.33329
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -66,21 +66,21 @@ vertical_alignment = 1
 position = Vector2(0.6666678, 332.6669)
 
 [node name="ColorRect" type="ColorRect" parent="Gate3" unique_id=1901533604]
-offset_left = 508.0
-offset_top = -170.66667
+offset_left = 507.3333
+offset_top = -181.33357
 offset_right = 548.0
-offset_bottom = -130.66667
+offset_bottom = -112.666916
 color = Color(1, 1, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gate3" unique_id=2065974367]
-position = Vector2(528.0002, -151)
+position = Vector2(527.3334, -147.0003)
 shape = SubResource("RectangleShape2D_aqk2v")
 
 [node name="Label" type="Label" parent="Gate3" unique_id=881635299]
 offset_left = 508.0
-offset_top = -163.33334
+offset_top = -180.66692
 offset_right = 548.0
-offset_bottom = -140.33334
+offset_bottom = -112.666916
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1

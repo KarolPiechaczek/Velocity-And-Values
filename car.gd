@@ -7,6 +7,7 @@ var current_lane = 0
 var target_y = 0.0
 
 func _ready():
+	$Sprite2D.texture = load(Global.player_skin)
 	target_y = position.y
 
 func _physics_process(delta):

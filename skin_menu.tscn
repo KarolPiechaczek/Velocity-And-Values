@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bg73edfxbcr26"]
+
+[ext_resource type="Script" uid="uid://d0cldiqeg67p6" path="res://skin_menu.gd" id="1_bimxs"]
+[ext_resource type="Texture2D" uid="uid://dcy0sycscjyr" path="res://car assets/car_red.png" id="2_3iey3"]
+[ext_resource type="Texture2D" uid="uid://3trmsk2ianii" path="res://car assets/car_yellow.png" id="3_saspd"]
+[ext_resource type="Texture2D" uid="uid://bf18036tuq7ag" path="res://car assets/car_green.png" id="4_l4mw2"]
+[ext_resource type="Texture2D" uid="uid://b7yppopuwyiuk" path="res://car assets/car_blue.png" id="5_potg8"]
+[ext_resource type="Texture2D" uid="uid://beokiw5dxe1y2" path="res://car assets/car_black.png" id="6_v70vg"]
+[ext_resource type="Texture2D" uid="uid://8gexrjbck6hr" path="res://car assets/motorcycle_red.png" id="7_n5ry3"]
+[ext_resource type="Texture2D" uid="uid://c31j1yn8e1pp8" path="res://car assets/motorcycle_yellow.png" id="8_aw8o5"]
+[ext_resource type="Texture2D" uid="uid://ddncko7c6kd2y" path="res://car assets/motorcycle_green.png" id="9_uv3r8"]
+[ext_resource type="Texture2D" uid="uid://ccklsltwxapo4" path="res://car assets/motorcycle_blue.png" id="10_r56i4"]
+[ext_resource type="Texture2D" uid="uid://dw1a34sb5lknm" path="res://car assets/motorcycle_black.png" id="11_3wdca"]
+
+[node name="SkinMenu" type="Control" unique_id=2128780912]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bimxs")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1447215425]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 642.0
+color = Color(0, 0, 0, 0.2627451)
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1039823203]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 87.0
+offset_right = 572.0
+offset_bottom = 344.0
+scale = Vector2(2, 2)
+columns = 5
+
+[node name="Car" type="Button" parent="GridContainer" unique_id=297821299]
+layout_mode = 2
+icon = ExtResource("2_3iey3")
+
+[node name="Car2" type="Button" parent="GridContainer" unique_id=1022802786]
+layout_mode = 2
+icon = ExtResource("3_saspd")
+
+[node name="Car3" type="Button" parent="GridContainer" unique_id=1317879505]
+layout_mode = 2
+icon = ExtResource("4_l4mw2")
+
+[node name="Car4" type="Button" parent="GridContainer" unique_id=1693293295]
+layout_mode = 2
+icon = ExtResource("5_potg8")
+
+[node name="Car5" type="Button" parent="GridContainer" unique_id=127495279]
+layout_mode = 2
+icon = ExtResource("6_v70vg")
+
+[node name="Motorcycle" type="Button" parent="GridContainer" unique_id=1341303669]
+layout_mode = 2
+icon = ExtResource("7_n5ry3")
+icon_alignment = 1
+
+[node name="Motorcycle2" type="Button" parent="GridContainer" unique_id=760219960]
+layout_mode = 2
+icon = ExtResource("8_aw8o5")
+icon_alignment = 1
+
+[node name="Motorcycle3" type="Button" parent="GridContainer" unique_id=1406096917]
+layout_mode = 2
+icon = ExtResource("9_uv3r8")
+icon_alignment = 1
+
+[node name="Motorcycle4" type="Button" parent="GridContainer" unique_id=754287630]
+layout_mode = 2
+icon = ExtResource("10_r56i4")
+icon_alignment = 1
+
+[node name="Motorcycle5" type="Button" parent="GridContainer" unique_id=588494779]
+layout_mode = 2
+icon = ExtResource("11_3wdca")
+icon_alignment = 1
+
+[node name="BackB" type="Button" parent="." unique_id=1359842413]
+layout_mode = 0
+offset_right = 74.19355
+offset_bottom = 46.0
+text = "BACK"
+
+[connection signal="pressed" from="GridContainer/Car" to="." method="_on_car_pressed"]
+[connection signal="pressed" from="GridContainer/Car2" to="." method="_on_car_2_pressed"]
+[connection signal="pressed" from="GridContainer/Car3" to="." method="_on_car_3_pressed"]
+[connection signal="pressed" from="GridContainer/Car4" to="." method="_on_car_4_pressed"]
+[connection signal="pressed" from="GridContainer/Car5" to="." method="_on_car_5_pressed"]
+[connection signal="pressed" from="GridContainer/Motorcycle" to="." method="_on_motorcycle_pressed"]
+[connection signal="pressed" from="GridContainer/Motorcycle2" to="." method="_on_motorcycle_2_pressed"]
+[connection signal="pressed" from="GridContainer/Motorcycle3" to="." method="_on_motorcycle_3_pressed"]
+[connection signal="pressed" from="GridContainer/Motorcycle4" to="." method="_on_motorcycle_4_pressed"]
+[connection signal="pressed" from="GridContainer/Motorcycle5" to="." method="_on_motorcycle_5_pressed"]
+[connection signal="pressed" from="BackB" to="." method="_on_back_b_pressed"]
