@@ -78,6 +78,7 @@ func _on_gate_entered(body, gate_idx):
 		else:
 			# WRONG ANSWER
 			print("Wrong! Game Over.")
+			MusicPlayer.get_node("AudioStreamPlayer").stop()
 			body.get_node("Sprite2D").hide()
 			var explosion = body.get_node("Explosion")
 			explosion.show()

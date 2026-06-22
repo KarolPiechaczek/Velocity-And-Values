@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6rpwyyac8gb5"
+path="res://.godot/imported/Life Is A Highway.mp3-dd62156a43f2c3d72d05d58835bf5e29.mp3str"
+
+[deps]
+
+source_file="res://Life Is A Highway.mp3"
+dest_files=["res://.godot/imported/Life Is A Highway.mp3-dd62156a43f2c3d72d05d58835bf5e29.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

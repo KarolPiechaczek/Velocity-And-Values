@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://gbehvnqt2hni"]
+
+[ext_resource type="AudioStream" uid="uid://b6rpwyyac8gb5" path="res://Life Is A Highway.mp3" id="1_fvyft"]
+
+[node name="MusicPlayer" type="Node2D" unique_id=1381077787]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=120782477]
+stream = ExtResource("1_fvyft")
+autoplay = true
