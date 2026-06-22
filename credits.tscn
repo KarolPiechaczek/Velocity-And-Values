@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cwiwubmyi7845"]
+
+[ext_resource type="Script" uid="uid://da8qo0uq2qa81" path="res://how_to_play.gd" id="1_nm7lk"]
+
+[node name="Credits" type="Control" unique_id=1503154325]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nm7lk")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=657896276]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 642.0
+color = Color(0, 0, 0, 0.2627451)
+
+[node name="BackB" type="Button" parent="ColorRect" unique_id=1908602066]
+layout_mode = 0
+offset_right = 74.19355
+offset_bottom = 46.0
+text = "BACK"
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=399498619]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 58.0
+offset_right = 795.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 44
+text = "VELOCITY & VALUES"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1642330973]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 206.0
+offset_right = 882.0
+offset_bottom = 422.0
+theme_override_font_sizes/normal_font_size = 22
+text = "Created by: Karol Piechaczek
+Project for: SUT, Development of Computer Games
+Assets and graphics sourced from open libraries.
+Thank you for playing!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ColorRect/BackB" to="." method="_on_back_b_pressed"]
