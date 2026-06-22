@@ -56,6 +56,7 @@ text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/PlayB" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/PlayB" to="." method="_on_play_b_pressed"]
+[connection signal="pressed" from="VBoxContainer/HowToPlayB" to="." method="_on_how_to_play_b_pressed"]
 [connection signal="pressed" from="VBoxContainer/HowToPlayB" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/GarageB" to="." method="_on_garage_b_pressed"]
 [connection signal="pressed" from="VBoxContainer/SettingsB" to="." method="_on_settings_b_pressed"]

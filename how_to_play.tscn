@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://d06av2sum8msk"]
+
+[ext_resource type="Script" uid="uid://da8qo0uq2qa81" path="res://how_to_play.gd" id="1_1ad62"]
+
+[node name="HowToPlay" type="Control" unique_id=1503154325]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ad62")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=657896276]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 642.0
+color = Color(0, 0, 0, 0.2627451)
+
+[node name="BackB" type="Button" parent="ColorRect" unique_id=1908602066]
+layout_mode = 0
+offset_right = 74.19355
+offset_bottom = 46.0
+text = "BACK"
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=399498619]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 49.0
+offset_right = 735.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 44
+text = "HOW TO PLAY"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1642330973]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 124.0
+offset_right = 1049.0
+offset_bottom = 568.0
+theme_override_font_sizes/normal_font_size = 22
+text = "WELCOME TO VELOCITY & VALUES!
+Your mission is to drive as far as possible while solving math equations on the fly!
+
+CONTROLS:
+• Use the UP and DOWN arrow keys to steer your car and change lanes.
+
+RULES:
+• A math equation will appear on the road ahead.
+• Quickly calculate the correct answer.
+• Steer your car into the lane with the correct result.
+• Right answer = Speed up & Score points! Wrong answer = GAME OVER!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ColorRect/BackB" to="." method="_on_back_b_pressed"]

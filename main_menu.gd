@@ -16,7 +16,7 @@ func _on_play_b_pressed() -> void:
 
 
 func _on_how_to_play_b_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://how_to_play.tscn")
 
 
 func _on_settings_b_pressed() -> void:
