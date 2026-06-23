@@ -83,6 +83,7 @@ func _on_gate_entered(body, gate_idx):
 			var explosion = body.get_node("Explosion")
 			explosion.show()
 			explosion.play("default")
+			body.get_node("ExplosionSound").play(0.88)
 			# Pause the game logic
 			get_tree().paused = true
 			# Spawn the Game Over UI on screen

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://56r8vyakq36g" path="res://car.gd" id="1_uoj53"]
 [ext_resource type="Texture2D" uid="uid://dcy0sycscjyr" path="res://car assets/car_red.png" id="2_uoj53"]
+[ext_resource type="AudioStream" uid="uid://dbjhcwhf421bl" path="res://Big Explosion Sound Effect.mp3" id="3_k61xc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_06lh1"]
 size = Vector2(108, 58)
@@ -17,3 +18,7 @@ texture = ExtResource("2_uoj53")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=677880464]
 position = Vector2(-1.3333334, 0.33333272)
 shape = SubResource("RectangleShape2D_06lh1")
+
+[node name="ExplosionSound" type="AudioStreamPlayer" parent="." unique_id=1502044697]
+process_mode = 3
+stream = ExtResource("3_k61xc")
